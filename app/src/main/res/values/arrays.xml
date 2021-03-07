@@ -1,0 +1,140 @@
+<resources>
+    <!-- 펫 스피너 배열-->
+    <string-array name="spinner_pet_kind">
+        <item>강아지</item>
+        <item>고양이</item>
+        <item>햄스터</item>
+        <item>고슴도치</item>
+        <item>토끼</item>
+    </string-array>
+
+    <string-array name="spinner_dog_breed">
+        <item>마르티즈</item>
+        <item>닥스훈트</item>
+        <item>골든리트리버</item>
+        <item>웰시코기</item>
+        <item>시바견</item>
+        <item>셰퍼드</item>
+        <item>불독</item>
+        <item>믹스견</item>
+        <item>도베르만</item>
+        <item>레브라도 리트리버</item>
+        <item>슈나우저</item>
+        <item>보더 콜리</item>
+        <item>치와와</item>
+        <item>불 테리어</item>
+        <item>비글</item>
+        <item>비숑</item>
+        <item>사모예드</item>
+        <item>진돗개</item>
+        <item>스패니얼</item>
+        <item>시베리안 허스키</item>
+        <item>말라뮤트</item>
+        <item>푸들</item>
+        <item>요크셔테리어</item>
+        <item>차우차우</item>
+        <item>코몬도르</item>
+        <item>포메라니안</item>
+        <item>포인터</item>
+        <item>저먼 핀셔</item>
+    </string-array>
+
+    <string-array name="spinner_cat_breed">
+        <item>짬타이거</item>
+        <item>페르시안</item>
+        <item>러시안 블루</item>
+        <item>뱅골</item>
+        <item>브리티시 쇼트헤어</item>
+        <item>시암고양이</item>
+        <item>메인쿤</item>
+        <item>스핑크스</item>
+        <item>래그돌</item>
+        <item>먼치킨</item>
+        <item>스코티시 폴드</item>
+        <item>버먼</item>
+        <item>아비니시안</item>
+        <item>터키시 앙고라</item>
+        <item>샤르트뢰</item>
+        <item>사바나</item>
+        <item>시베리안 고양이</item>
+        <item>토이거</item>
+        <item>데본렉스</item>
+        <item>네벨룽</item>
+        <item>봄베이 고양이</item>
+        <item>맹크스</item>
+        <item>버마고양이</item>
+        <item>발리니즈</item>
+        <item>유러피안 숏헤어</item>
+        <item>반 고양이</item>
+        <item>라이코이</item>
+        <item>스노우슈</item>
+        <item>라팜</item>
+    </string-array>
+
+    <string-array name="spinner_hamster_breed">
+        <item>햄토리</item>
+        <item>시리아 햄스터</item>
+        <item>중국 햄스터</item>
+        <item>캠벨 난쟁이 햄스터</item>
+        <item>유럽 햄스터</item>
+        <item>회색 난쟁이 햄스터</item>
+        <item>비단털쥐</item>
+        <item>몽골 햄스터</item>
+    </string-array>
+
+    <string-array name="spinner_hedgehog_breed">
+        <item>모름</item>
+        <item>스탠다드 고슴도치</item>
+        <item>스노우 샴페인 고슴도치</item>
+        <item>실버 챠콜 고슴도치</item>
+        <item>알비노 고슴도치</item>
+        <item>핀토 고슴도치</item>
+        <item>크림 고슴도치</item>
+        <item>플라타나 고슴도치</item>
+    </string-array>
+
+    <string-array name="spinner_rabbit_breed">
+        <item>헬로키티</item>
+        <item>아메리칸</item>
+        <item>팔로미노</item>
+        <item>뉴질랜드 레드</item>
+        <item>트리안타</item>
+        <item>벨지안 헤어</item>
+        <item>라일락</item>
+        <item>하바나</item>
+        <item>플로리다 화이트</item>
+        <item>알래스카</item>
+        <item>베버런</item>
+        <item>캘리포니안</item>
+        <item>할리퀸</item>
+        <item>살렌더</item>
+        <item>튜링거</item>
+        <item>베이지</item>
+        <item>데일레나</item>
+    </string-array>
+    <!-- 펫 스피너 end -->
+
+    <!-- 입금은행 배열 -->
+    <string-array name="spinner_bank_name">
+        <item>농협</item>
+        <item>국민</item>
+        <item>신한</item>
+        <item>우리</item>
+        <item>기업</item>
+        <item>새마을</item>
+        <item>하나</item>
+    </string-array>
+
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
+    </string-array>
+
+
+</resources>

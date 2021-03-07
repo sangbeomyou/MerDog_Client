@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="activity"
+            type="com.ccit19.merdog_client.PetModifyActivity" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".PetModifyActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/pm_check_petname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="이름을 입력해주세요.(최대 8자리 문자)"
+                    android:textSize="12dp"
+                    app:layout_constraintEnd_toEndOf="@+id/pm_et_petname"
+                    app:layout_constraintStart_toStartOf="@+id/pm_et_petname"
+                    app:layout_constraintTop_toBottomOf="@+id/pm_et_petname" />
+
+                <Spinner
+                    android:id="@+id/pm_spin_petkind"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tv_petkind"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_petkind" />
+
+                <Spinner
+                    android:id="@+id/pm_spin_petbreed"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/pm_petradiogroup"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tv_petbreed"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_petbreed" />
+
+                <RadioGroup
+                    android:id="@+id/pm_petradiogroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="@+id/pm_et_petage"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_petgender">
+
+                    <RadioButton
+                        android:id="@+id/pm_neutralized_female"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="중성화암컷"
+                        android:textSize="16dp"
+                        tools:layout_editor_absoluteX="69dp"
+                        tools:layout_editor_absoluteY="547dp" />
+
+                    <RadioButton
+                        android:id="@+id/pm_female"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="암컷"
+                        android:textSize="16dp"
+                        tools:layout_editor_absoluteX="69dp"
+                        tools:layout_editor_absoluteY="483dp" />
+
+                    <RadioButton
+                        android:id="@+id/pm_neutralized_male"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="중성화수컷"
+                        android:textSize="16dp"
+                        tools:layout_editor_absoluteX="69dp"
+                        tools:layout_editor_absoluteY="515dp" />
+
+                    <RadioButton
+                        android:id="@+id/pm_male"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="수컷"
+                        android:textSize="16dp"
+                        tools:layout_editor_absoluteX="69dp"
+                        tools:layout_editor_absoluteY="451dp" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/tv_petnoti"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="펫사진을 등록해주세요"
+                    android:textSize="18dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/toolbar3" />
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/colorPrimary"
+                    android:minHeight="?attr/actionBarSize"
+                    android:theme="?attr/actionBarTheme"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/pm_img_petimg"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/roundborder"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_petnoti"
+                    app:srcCompat="@android:drawable/ic_input_add" />
+
+                <EditText
+                    android:id="@+id/pm_et_petname"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:ems="10"
+                    android:hint="이름(8자리)"
+                    android:inputType="textPersonName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_petname" />
+
+                <EditText
+                    android:id="@+id/pm_et_petage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:hint="나이(ex.9)"
+                    android:inputType="textPersonName"
+                    app:layout_constraintEnd_toEndOf="@+id/pm_et_petname"
+                    app:layout_constraintStart_toStartOf="@+id/pm_et_petname"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_petage" />
+
+                <Button
+                    android:id="@+id/pm_btn_modify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="40dp"
+                    android:text="수정"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/pm_et_petnotice" />
+
+                <Button
+                    android:id="@+id/pm_btn_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="50dp"
+                    android:text="삭제"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/pm_et_petnotice" />
+
+                <TextView
+                    android:id="@+id/tv_petname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="펫이름"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/pm_et_petname"
+                    app:layout_constraintTop_toBottomOf="@+id/pm_img_petimg" />
+
+                <TextView
+                    android:id="@+id/tv_petbirth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="생년월일"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/pm_et_petname"
+                    app:layout_constraintTop_toBottomOf="@+id/pm_et_petname" />
+
+                <DatePicker
+                    android:id="@+id/modify_datepicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner"
+                    app:layout_constraintStart_toStartOf="@+id/tv_petbirth"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_petbirth" />
+
+                <TextView
+                    android:id="@+id/tv_petage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="나이"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/pm_et_petage"
+                    app:layout_constraintTop_toBottomOf="@+id/modify_datepicker" />
+
+                <TextView
+                    android:id="@+id/tv_petgender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:text="성별"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/pm_et_petage"
+                    app:layout_constraintTop_toBottomOf="@+id/pm_et_petage" />
+
+                <TextView
+                    android:id="@+id/tv_petkind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="40dp"
+                    android:text="종류"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/pm_petradiogroup"
+                    app:layout_constraintTop_toBottomOf="@+id/pm_et_petage" />
+
+                <TextView
+                    android:id="@+id/tv_petbreed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="품종"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/pm_petradiogroup"
+                    app:layout_constraintStart_toStartOf="@+id/pm_spin_petkind"
+                    app:layout_constraintTop_toBottomOf="@+id/pm_spin_petkind" />
+
+                <TextView
+                    android:id="@+id/tv_petnotice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="추가정보"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/pm_petradiogroup"
+                    app:layout_constraintTop_toBottomOf="@+id/pm_petradiogroup" />
+
+                <EditText
+                    android:id="@+id/pm_et_petnotice"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/roundborder"
+                    android:ems="10"
+                    android:hint="추가정보및 등록번호"
+                    android:inputType="textMultiLine|textNoSuggestions"
+                    android:lines="3"
+                    android:maxLines="3"
+                    android:minLines="3"
+                    android:padding="8dp"
+                    android:scrollbars="vertical"
+                    android:textSize="14dp"
+                    app:layout_constraintEnd_toEndOf="@+id/pm_spin_petbreed"
+                    app:layout_constraintStart_toStartOf="@+id/tv_petnotice"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_petnotice" />
+
+                <TextView
+                    android:id="@+id/pm_check_petage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="나이를 입력해주세요.(최대 2자리 숫자)"
+                    android:textSize="12dp"
+                    app:layout_constraintEnd_toEndOf="@+id/pm_et_petage"
+                    app:layout_constraintStart_toStartOf="@+id/pm_et_petage"
+                    app:layout_constraintTop_toBottomOf="@+id/pm_et_petage" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

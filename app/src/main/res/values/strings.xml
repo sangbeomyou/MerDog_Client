@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">머독</string>
+    <string name="title_home">홈</string>
+    <string name="title_dashboard">채팅</string>
+    <string name="title_notifications">내 정보</string>
+    <string name="id">아이디</string>
+    <string name="password">비밀번호</string>
+    <string name="password_conf">비밀번호 확인</string>
+    <string name="nic_name">닉네임</string>
+    <string name="overlap_check">중복확인</string>
+    <string name="sign_in">로그인</string>
+    <string name="sign_up">회원가입</string>
+    <string name="auto_login">자동로그인</string>
+    <string name="cert_send">인증번호 전송</string>
+    <string name="check">확인</string>
+    <string name="next">다음</string>
+    <string name="cert_num">인증번호</string>
+    <string name="kakao_app_key">068254d897559f8501e869748ce54d84</string>
+    <string name="quickstart_message">Click the SUBSCRIBE TO WEATHER button below to subscribe to the
+        weather topic. Messages sent to the weather topic will be received. The LOG TOKEN button logs the
+        InstanceID token to logcat.</string>
+    <string name="subscribe_to_weather">Subscribe To Weather</string>
+    <string name="log_token">Log Token</string>
+    <string name="msg_subscribed">Subscribed to weather topic</string>
+    <string name="msg_token_fmt" translatable="false">InstanceID Token: %s</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <!-- [START fcm_default_icon_string] -->
+    <string name="default_notification_channel_name" translatable="true">Weather</string>
+    <!-- [END fcm_default_icon_string] -->
+    <string name="msg_subscribe_failed">Failed to subscribe to weather topic</string>
+    <string name="fcm_message">FCM Message</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+</resources>

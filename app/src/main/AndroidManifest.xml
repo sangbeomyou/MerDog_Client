@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ccit19.merdog_client">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".RateActivity"></activity>
+        <activity android:name=".PaymentActivity" />
+        <activity android:name=".ProductActivity" />
+        <activity android:name=".BillingInfoActivity" />
+        <activity android:name=".PetModifyActivity" />
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity android:name=".CheckAcActivity" />
+        <activity android:name=".FindAC2_Activity" />
+        <activity android:name=".FindAC1_Activity" />
+        <activity android:name=".EditAC_Activity" />
+        <activity android:name=".MatchChatActivity" />
+        <activity
+            android:name=".WebViewActivity"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity android:name=".Regit_2Activity" />
+        <activity android:name=".PetRegisterActivity" />
+        <activity android:name=".PetListActivity" />
+        <activity android:name=".Regit_1Activity" />
+        <activity android:name=".LoginActivity" />
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name=".MainActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ChatActivity" />
+
+        <service android:name=".backServ.GpsTracker" />
+        <service
+            android:name=".backServ.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="activity"
+            type="com.ccit19.merdog_client.ChatActivity" />
+    </data>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/chta_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="56dp"
+            android:clipToPadding="false"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            tools:context=".ChatActivity">
+
+            <ListView
+                android:id="@+id/messages_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:clickable="false"
+                android:divider="#fff"
+                android:focusable="auto"
+                android:focusableInTouchMode="false"
+                android:longClickable="false" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/chat_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/ac_imgbtn_imgselect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/msg_text"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/msg_text"
+                    app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+                <EditText
+                    android:id="@+id/msg_text"
+                    style="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox.Dense"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:ems="10"
+                    android:inputType="textMultiLine"
+                    android:lines="3"
+                    android:maxLines="3"
+                    android:minLines="1"
+                    android:paddingHorizontal="15dp"
+                    android:scrollbars="vertical"
+                    android:text=""
+                    app:layout_constraintEnd_toStartOf="@+id/ac_btn_send"
+                    app:layout_constraintStart_toEndOf="@+id/ac_imgbtn_imgselect"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageButton
+                    android:id="@+id/ac_btn_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/white"
+                    android:clickable="false"
+                    android:scaleType="fitXY"
+                    android:src="@android:drawable/ic_menu_send"
+                    app:layout_constraintBottom_toBottomOf="@+id/msg_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/msg_text" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

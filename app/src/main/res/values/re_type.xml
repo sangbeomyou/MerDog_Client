@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="match_type">
+        <item>행동</item>
+        <item>영양</item>
+        <item>질병</item>
+        <item>한방/재활</item>
+        <item>수술</item>
+        <item>예방접종</item>
+        <item>기타</item>
+        <item>잘 모르겠어요</item>
+    </string-array>
+</resources>

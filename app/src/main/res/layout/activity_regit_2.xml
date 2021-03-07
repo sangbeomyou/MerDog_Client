@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.ccit19.merdog_client.Regit_2Activity" />
+    </data>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:context=".Regit_2Activity">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/UserInfoForm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="48dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <EditText
+                            android:id="@+id/s_userId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:autofillHints="@string/id"
+                            android:drawableStart="@drawable/ic_perm_identity_24px"
+                            android:drawablePadding="8dp"
+                            android:ems="10"
+                            android:hint="@string/id"
+                            android:inputType="textEmailAddress"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/idAlt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/s_userId" />
+
+                        <Button
+                            android:id="@+id/id_check"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="@string/overlap_check"
+                            app:layout_constraintBottom_toBottomOf="@+id/s_userId"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/s_userId"
+                            app:layout_constraintTop_toTopOf="@+id/s_userId" />
+
+                        <EditText
+                            android:id="@+id/s_userPass"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_lock_24px"
+                            android:drawablePadding="8dp"
+                            android:ems="10"
+                            android:hint="@string/password"
+                            android:inputType="textPassword"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/idAlt" />
+
+                        <TextView
+                            android:id="@+id/passAlt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#E53A40"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/s_userPass" />
+
+                        <EditText
+                            android:id="@+id/s_passVeri"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_lock_24px"
+                            android:drawablePadding="8dp"
+                            android:ems="10"
+                            android:hint="@string/password_conf"
+                            android:inputType="textPassword"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/passAlt" />
+
+                        <TextView
+                            android:id="@+id/passvrifAlt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/s_passVeri" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="48dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/UserInfoForm">
+
+                        <EditText
+                            android:id="@+id/s_nicname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_assignment_ind_24px"
+                            android:drawablePadding="8dp"
+                            android:ems="10"
+                            android:hint="@string/nic_name"
+                            android:inputType="textPersonName"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <Button
+                            android:id="@+id/nic_check"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="@string/overlap_check"
+                            app:layout_constraintBottom_toBottomOf="@+id/s_nicname"
+                            app:layout_constraintStart_toEndOf="@+id/s_nicname"
+                            app:layout_constraintTop_toTopOf="@+id/s_nicname" />
+
+                        <TextView
+                            android:id="@+id/nicnameAlt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="@+id/s_nicname"
+                            app:layout_constraintTop_toBottomOf="@+id/s_nicname" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+                        <TextView
+                            android:id="@+id/s_userPhone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="24dp"
+                            android:layout_marginRight="24dp"
+                            android:textSize="24sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/cert_send"
+                            app:layout_constraintEnd_toStartOf="@+id/cert_send"
+                            app:layout_constraintTop_toTopOf="@+id/cert_send" />
+
+                        <Button
+                            android:id="@+id/cert_send"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cert_send"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <EditText
+                            android:id="@+id/cert_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_textsms_24px"
+                            android:drawablePadding="8dp"
+                            android:ems="10"
+                            android:enabled="false"
+                            android:hint="@string/cert_num"
+                            android:inputType="number"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/cert_send" />
+
+                        <Button
+                            android:id="@+id/certnum_check"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:enabled="false"
+                            android:text="@string/check"
+                            app:layout_constraintBottom_toBottomOf="@+id/cert_num"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/cert_num"
+                            app:layout_constraintTop_toTopOf="@+id/cert_num" />
+
+                        <TextView
+                            android:id="@+id/certnumAlt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="@+id/cert_num"
+                            app:layout_constraintTop_toBottomOf="@+id/cert_num" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        app:layout_constraintBottom_toTopOf="@+id/fin_button"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout5">
+
+                        <CheckBox
+                            android:id="@+id/checkBox2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/usePolish"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="이용약관, "
+                            app:layout_constraintBottom_toBottomOf="@+id/checkBox2"
+                            app:layout_constraintStart_toEndOf="@+id/checkBox2"
+                            app:layout_constraintTop_toTopOf="@+id/checkBox2" />
+
+                        <TextView
+                            android:id="@+id/privacyPolicy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="개인정보 활용동의"
+                            app:layout_constraintBottom_toBottomOf="@+id/usePolish"
+                            app:layout_constraintStart_toEndOf="@+id/usePolish"
+                            app:layout_constraintTop_toTopOf="@+id/usePolish" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <Button
+                        android:id="@+id/fin_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="161dp"
+                        android:layout_marginLeft="161dp"
+                        android:layout_marginEnd="161dp"
+                        android:layout_marginRight="161dp"
+                        android:layout_marginBottom="32dp"
+                        android:text="@string/check"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </ScrollView>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/r2_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_scrollFlags="scroll|enterAlways" />
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
+
+</layout>

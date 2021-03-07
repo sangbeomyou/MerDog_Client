@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaymentActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/p_tv_bankname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="입금할 은행"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/p_rg_method" />
+
+            <TextView
+                android:id="@+id/p_pay_method"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:text="결제수단"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/p_payment" />
+
+            <RadioGroup
+                android:id="@+id/p_rg_method"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/p_pay_method">
+
+                <RadioButton
+                    android:id="@+id/p_method_passbook"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="무통장입금" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/p_payment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="결제"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout9" />
+
+            <TextView
+                android:id="@+id/p_product_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="상품정보"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/p_product_info">
+
+                <TableLayout
+                    android:id="@+id/product_table_layout"
+                    android:layout_width="374dp"
+                    android:layout_height="109dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="20dp"
+                    android:background="#000000"
+                    android:padding="1dp"
+                    android:stretchColumns="*"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            android:background="#FFFFFF"
+                            android:text="상품번호"
+                            android:textAlignment="center"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/p_product_id"
+                            android:layout_width="92dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:background="#FFFFFF"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textSize="18dp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="37dp"
+                            android:layout_height="26dp"
+                            android:layout_margin="1dp"
+                            android:background="#FFFFFF"
+                            android:text="상품명"
+                            android:textAlignment="center"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/p_product_name"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:background="#FFFFFF"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textSize="18dp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="108dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:background="#FFFFFF"
+                            android:text="지급 이용권개수"
+                            android:textAlignment="center"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/p_product_ticket"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:background="#FFFFFF"
+                            android:maxLength="20"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textSize="18dp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            android:background="#FFFFFF"
+                            android:text="상품가격"
+                            android:textAlignment="center"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/p_product_price"
+                            android:layout_width="92dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:background="#FFFFFF"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textSize="18dp" />
+
+                    </TableRow>
+                </TableLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Spinner
+                android:id="@+id/p_bank_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/p_tv_bankname" />
+
+            <TextView
+                android:id="@+id/p_tv_bankdepo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="입금할 예금주"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/p_bank_name" />
+
+            <EditText
+                android:id="@+id/p_bank_depo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:hint="예금주명을 입력해주세요"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/p_tv_bankdepo" />
+
+            <Button
+                android:id="@+id/p_btn_payment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="결제신청"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/p_bank_depo" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
